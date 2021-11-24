@@ -5,14 +5,7 @@ import { useEffect, useState } from 'react';
 import { getTopByPlayers, getTopByPlaytime } from '../API/game';
 import OptionsType from '../interfaces/options.interface';
 
-const columns: GridColDef[] = [
-  { field: 'id', headerName: "id", width: 70, hide: true },
-  { field: 'game', headerName: 'Game', width: 130 },
-  { field: 'genre', headerName: 'Genre', width: 130 },
-  { field: 'platforms', headerName: 'Platforms', width: 200, renderCell: ({ value }) => value.map((platform: string, index: number) => <>{!index ? <div>{platform}</div> : <div>, {platform}</div>}</>) },
-  { field: 'totalPlayTime', headerName: 'Total Play Time', width: 150 },
-  { field: 'totalPlayers', headerName: 'Total Player', width: 150 }
-];
+
 
 interface GameForm {
     type: 'playtime' | 'player';
@@ -20,7 +13,14 @@ interface GameForm {
 
 const GamesForm = (props: GameForm) => {
   const [rows, setRows] = useState([]);
-
+  const columns: GridColDef[] = [
+    { field: 'id', headerName: "id", width: 70, hide: true },
+    { field: 'game', headerName: 'Game', width: 330 },
+    { field: 'genre', headerName: 'Genre', width: 130 },
+    { field: 'platforms', headerName: 'Platforms', width: 400, renderCell: ({ value }) => value.map((platform: string, index: number) => <>{!index ? <div>{platform}</div> : <div>, {platform}</div>}</>) },
+    { field: 'totalPlayTime', headerName: 'Total Play Time', width: 150 },
+    { field: 'totalPlayers', headerName: 'Total Player', width: 150 }
+  ];
   const optionsDefaultValue: OptionsType = {
     genre: "",
     platform:""
@@ -32,7 +32,7 @@ const GamesForm = (props: GameForm) => {
           case "player":
             getTopByPlayers(options.genre, options.platform)
               .then(({ data }) => {
-                  setRows(data)
+                  setRows(data);
               });
               break;
           case "playtime":
@@ -47,7 +47,7 @@ const GamesForm = (props: GameForm) => {
   }, [options]);
 
   return (
-    <main className="m-4 bg-gray-50 h-full">
+    <main className="m-4 bg-gray-50 h-full ">
       <Paper elevation={5}>
         <section className="mx-4 pt-4">
           <h1 className="text-lg md:text-2xl font-semibold">{`Games with the top ${props.type}`}</h1>
