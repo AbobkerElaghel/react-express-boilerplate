@@ -15,6 +15,14 @@ After downloading and unzipping the folder repo, please follow these steps
 
 You can also build the app using **`npm run build`**  and then serve it locally using **`npm start`**
 
+## How to run the tests 🧪
+
+1. cd into the gaming-charts folder  
+2. open a terminal inside the folder and install all the dependencies by typing **`npm i`**
+3. run the tests using **`npm test`** or **`npm run test`**
+
+
+
 ## File-Structure 📁
 .
 ├── build -> ***built version of the frontend***
