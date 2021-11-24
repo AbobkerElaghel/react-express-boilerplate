@@ -1,1 +1,0 @@
-{"version":3,"file":"game.route.js","sourceRoot":"","sources":["../../../src/routes/v1/game.route.ts"],"names":[],"mappings":";;;;;AAAA,sDAA8B;AAC9B,uEAA2F;AAE3F,MAAM,MAAM,GAAG,iBAAO,CAAC,MAAM,EAAE,CAAC;AAChC,MAAM,CAAC,GAAG,CAAC,yBAAyB,EAAE,qCAAmB,CAAC,CAAC;AAC3D,MAAM,CAAC,GAAG,CAAC,wBAAwB,EAAE,oCAAkB,CAAC,CAAC;AACzD,kBAAe,MAAM,CAAC"}
