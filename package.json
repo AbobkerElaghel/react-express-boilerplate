@@ -38,8 +38,8 @@
     "devServer": "nodemon ./server/src/index.ts",
     "buildServer": "cd server && tsc",
     "startServer": "node ./server/dist/index.js",
-    "build": "craco build",
-    "start": "npm run buildServer && npm run startServer",
+    "build": "craco build && npm run buildServer",
+    "start": "npm run startServer",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
