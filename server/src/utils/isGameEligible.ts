@@ -21,7 +21,7 @@ const customIncludes = (array: string[], searchElement: string): boolean => {
  * @param {Game} game
  * @param {OptionsType} options
  */
- const isGameEligible = (game: Game, options: OptionsType) => {
+ const isGameEligible = (game: Game, options?: OptionsType) => {
     // make it for...in with branching for if array or not
     if (options && (options.genre || options.platform)) {
         if (options.genre && options.genre.toLocaleLowerCase() !== game.genre.toLocaleLowerCase()) {

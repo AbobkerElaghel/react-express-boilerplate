@@ -1,9 +1,10 @@
 interface Games {
-    game: string
-    genre: string
-    platforms: string[]
-    totalPlayTime: number
-    totalPlayers: number
+    id?: string;
+    game: string;
+    genre: string;
+    platforms: string[];
+    totalPlayTime: number;
+    totalPlayers: number;
   }
   
   export default Games;

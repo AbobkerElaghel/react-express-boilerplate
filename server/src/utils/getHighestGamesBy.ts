@@ -4,13 +4,13 @@ import Games from "../interfaces/games.interface";
 import isGameEligible from "./isGameEligible";
 
 /**
- * @description accepts the Games and filter them according to the by param based on playing time or number of player
+ * @description accepts the Games and filters them according to the by param based on playing time or number of players
  * @param By filter to get games by total Players or total time
  * @param dataset dataset of the games to filter
  * @param options options for advanced filtering
- * @returns filterd games according to the options provided  via the params
+ * @returns {Games[]} The highest playtime or players games array
  */
-const getHighestGamesBy = (By: 'totalPlayTime' | 'totalPlayers', dataset: Game[], options: OptionsType) => {
+const getHighestGamesBy = (By: 'totalPlayTime' | 'totalPlayers', dataset: Game[], options?: OptionsType) => {
     const games: Games[] = _getGames(dataset, options);
     let result: Games[] = [];
     let max = -Infinity;
@@ -27,14 +27,14 @@ const getHighestGamesBy = (By: 'totalPlayTime' | 'totalPlayers', dataset: Game[]
 
   /**
    * @description used to filter according to options object and count the total unique
-   * player for each game and the total played time for each game
+   * players for each game and the total played time for each game
    *
    * @param {Game[]} dataset dataset of the games to filter
    * @param {OptionsType} options options for advanced filtering
-   * @returns array of games that follow the new interface {@code Games}
+   * @returns {Games[]} array of games that follow the new interface {@code Games} (with no game duplication)
    */
-  const _getGames = (dataset: Game[], options: OptionsType): Games[] => {
-    if (!dataset.length) {
+  const _getGames = (dataset: Game[], options?: OptionsType): Games[] => {
+    if (!dataset || !dataset.length) {
       // dataset is empty
       return [];
     };
