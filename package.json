@@ -35,11 +35,11 @@
   },
   "scripts": {
     "devFront": "craco start",
-    "buildFront": "craco build",
     "devServer": "nodemon ./server/src/index.ts",
     "buildServer": "cd server && tsc",
     "startServer": "node ./server/dist/index.js",
-    "start": "npm run buildFront && npm run buildServer && npm run startServer",
+    "build": "craco build",
+    "start": "npm run buildServer && npm run startServer",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
