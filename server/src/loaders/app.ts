@@ -3,7 +3,7 @@ import express from 'express';
 import httpStatus from 'http-status';
 import errorHandler from '../middlewares/handleError';
 import ApiError from '../utils/AppError';
-import gameRouter from '../routes/v1/game.route'
+import router from '../routes/v1/router.route'
 import path from 'path';
 
 const app = express();
@@ -11,7 +11,7 @@ const app = express();
 app.use(cors());
 app.options('*', cors());
 
-app.use('/v1', gameRouter);
+app.use('/v1' ,router);
 app.use(express.static(path.join(__dirname, '..', '..', '..', 'build')));
 
 // response for requests to non existsing end points (404).
