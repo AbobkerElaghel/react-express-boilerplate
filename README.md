@@ -7,9 +7,8 @@ Front end code is located in the /src folder.
 the project is an extension of react-create-app.
 inspired by [❤️bulletproof architecture❤️](https://github.com/santiq/bulletproof-nodejs)
 
->***NOTE***: For your convenience, a hosted version of the app can be found [here](https://gaming-charts.herokuapp.com/).
-
 ## How to start 🚀
+
 >***NOTE***: Make sure the internet connection is up before executing the next steps.
 
 1. open a terminal inside the folder and install all the dependencies by typing **`npm i`**
