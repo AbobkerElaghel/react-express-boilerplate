@@ -27,6 +27,7 @@ You can also build the app using **`npm run build`**  and then serve it locally 
 
 
 ## File-Structure 📁
+```
 .
 ├── build -> ***built version of the frontend***
 ├── public-> ***frontend public folder***
@@ -45,3 +46,4 @@ You can also build the app using **`npm run build`**  and then serve it locally 
 ├── README.md
 ├── tailwind.config.js  -> ***config file for tailwind CSS framework***
 └── tsconfig.json
+```
